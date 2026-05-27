@@ -43,47 +43,39 @@ Once your content is in the repo, use these three phrases with Copilot to build 
 
 ### Session Description
 
-*Add Session Description*
+Start with solution-centric Windows AI APIs - now expanding beyond Copilot+ devices. Use Foundry Local to run open-source models locally. With new tooling in Foundry Toolkit, optimize and prep your models for local AI deployments. Run custom AI workloads locally across GPU, NPU, or CPU with Windows ML, now with support for web apps through WebNN. Learn how the platform enables on-device inference across all Windows PCs to help you ship performant, scalable, and secure AI-powered apps on Windows.
 
-### 🏫 Getting started in a guided session
+### 🎙️ Speech Recognition API
 
-To get started in a guided lab session:
-- <!-- step 1 -->
-- <!-- step 2 -->
-- <!-- step 3 -->
+To try this demo:
 
-### 🏠 Getting started in your own environment
+1. Install the **June experimental release** of the Windows App SDK. This will be released soon.
+2. In Visual Studio, set a dependency on your downloaded **Windows App SDK** NuGet package.
+3. Build and run the solution in Visual Studio.
 
-If you're following these steps at your own pace:
-- Clone this repository
-- Set up your development environment
-- <!-- step 3 -->
+### 🧠 Phi Silica on GPU
 
-### 🧠 Learning Outcomes
+1. Install the **June experimental release** of the Windows App SDK. This will be released soon.
+2. In Visual Studio, set a dependency on your downloaded **Windows App SDK** NuGet package.
+3. Build and run the solution in Visual Studio.
 
-By the end of this session, you will be able to:
+### 🖼️ Foundry Local - Qwen3.5 VLM
 
-- <!-- outcome 1 -->
-- <!-- outcome 2 -->
-- <!-- outcome 3 -->
+Pre-requisites - have node.js installed
 
-### 💬 Keep Learning with Copilot
+1. Install foundry local - npm install foundry-local-sdk
+2. From inside the foundry-local folder, run this command-  npm install
+3. npm run dev
 
-Try these prompts with GitHub Copilot to explore the topics from this session. Open Copilot Chat in VS Code (`Ctrl+Alt+I` on Windows/Linux, `Cmd+Shift+I` on Mac), paste a prompt, and see what you learn. Try connecting the [Microsoft Learn MCP Server](#-microsoft-learn-mcp-server) for the latest official documentation.
+### 🛠️ Windows ML CLI
 
-Use these as a starting point — or write your own!
+<!-- Add content about Windows ML CLI demo/walkthrough -->
 
-<!-- Prompts will be tailored to this session's content during repo setup. -->
+### 🌐 WebNN
 
-> *Prompts coming soon — check back after the session content is finalized.*
+<!-- Add content about WebNN demo/walkthrough -->
 
-### 💻 Technologies Used
-
-1. <!-- technology 1 -->
-1. <!-- technology 2 -->
-1. <!-- technology 3 -->
-
-### 📚 Resources and Next Steps
+### 📚 Resources
 
 | Resource | Description |
 |:---------|:------------|

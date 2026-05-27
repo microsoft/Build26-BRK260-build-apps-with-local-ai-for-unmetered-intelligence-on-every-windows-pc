@@ -47,15 +47,14 @@ Start with solution-centric Windows AI APIs - now expanding beyond Copilot+ devi
 
 ### 🎙️ Speech Recognition API
 
-To try this demo:
 
-1. Install the **June experimental release** of the Windows App SDK. This will be released soon.
+1. Install the **June experimental release** of the Windows App SDK (version2.1.6). This will be released soon.
 2. In Visual Studio, set a dependency on your downloaded **Windows App SDK** NuGet package.
 3. Build and run the solution in Visual Studio.
 
 ### 🧠 Phi Silica on GPU
 
-1. Install the **June experimental release** of the Windows App SDK. This will be released soon.
+1. Install the **June experimental release** of the Windows App SDK (version 2.1.6). This will be released soon.
 2. In Visual Studio, set a dependency on your downloaded **Windows App SDK** NuGet package.
 3. Build and run the solution in Visual Studio.
 

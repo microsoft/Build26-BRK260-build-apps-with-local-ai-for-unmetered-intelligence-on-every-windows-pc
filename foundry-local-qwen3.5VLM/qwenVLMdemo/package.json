@@ -1,0 +1,51 @@
+{
+  "name": "qwen-vision-describer",
+  "version": "1.0.0",
+  "description": "Electron app that uses Foundry Local with Qwen 3.5 9B to describe images",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --enable-logging",
+    "package": "electron-builder --win --arm64",
+    "dist": "electron-builder --win --arm64"
+  },
+  "devDependencies": {
+    "electron": "^34.5.8",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.qwen.vision-describer",
+    "productName": "Qwen Vision Describer",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "icon": null
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.js",
+      "node_modules/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/foundry-local-sdk/**"
+    ]
+  },
+  "dependencies": {
+    "foundry-local-sdk": "^1.1.0"
+  }
+}

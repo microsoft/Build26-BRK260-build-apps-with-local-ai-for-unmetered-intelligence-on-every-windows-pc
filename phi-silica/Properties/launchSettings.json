@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Generate with Phi SilicaSample (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Generate with Phi SilicaSample (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

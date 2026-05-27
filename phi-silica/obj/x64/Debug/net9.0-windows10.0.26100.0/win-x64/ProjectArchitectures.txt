@@ -1,0 +1,1 @@
+C:\Phi with structured output\Generate_with_Phi_SilicaSample.csproj;x64

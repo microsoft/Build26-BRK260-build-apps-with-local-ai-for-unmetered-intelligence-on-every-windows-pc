@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="AIDevGallery.Sample.Sample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#3B2314">
+
+    <Page.Resources>
+        <!-- Coffee brown colors -->
+        <SolidColorBrush x:Key="TileBackground" Color="#F5E6D3" />
+        <SolidColorBrush x:Key="TileBorder" Color="#C4A882" />
+        <SolidColorBrush x:Key="CoffeeBrownText" Color="#4A2C17" />
+        <SolidColorBrush x:Key="CoffeeBrownSecondary" Color="#6B4226" />
+        <SolidColorBrush x:Key="CoffeeBrownTertiary" Color="#8B6914" />
+        <SolidColorBrush x:Key="CreamText" Color="#F5E6D3" />
+
+        <Style x:Key="OrderTicketStyle" TargetType="Border">
+            <Setter Property="Background" Value="{StaticResource TileBackground}" />
+            <Setter Property="BorderBrush" Value="{StaticResource TileBorder}" />
+            <Setter Property="BorderThickness" Value="1.5" />
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="Height" Value="200" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+
+        <Style x:Key="TileTitleStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Foreground" Value="{StaticResource CoffeeBrownText}" />
+        </Style>
+
+        <Style x:Key="TileSubtitleStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Foreground" Value="{StaticResource CoffeeBrownSecondary}" />
+        </Style>
+
+        <Style x:Key="TileDetailStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="11" />
+            <Setter Property="Foreground" Value="{StaticResource CoffeeBrownTertiary}" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Padding="28" RowSpacing="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock
+            Text="☕ Barista Order Queue"
+            FontSize="26"
+            FontWeight="Bold"
+            Foreground="{StaticResource CreamText}" />
+
+        <!-- Order Queue Tickets -->
+        <ScrollViewer
+            Grid.Row="1"
+            VerticalScrollBarVisibility="Auto"
+            HorizontalScrollBarVisibility="Disabled"
+            MaxHeight="440">
+            <StackPanel x:ConnectionId='5' x:Name="OrderQueuePanel" Spacing="14">
+                <!-- Row 1 -->
+                <Grid ColumnSpacing="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Border x:ConnectionId='9' Grid.Column="0" Style="{StaticResource OrderTicketStyle}"                       >
+                        <StackPanel Padding="14" Spacing="4" VerticalAlignment="Top">
+                            <TextBlock Text="Cosmo Sparkle Latte" Style="{StaticResource TileTitleStyle}" />
+                            <TextBlock Text="Large, Iced" Style="{StaticResource TileSubtitleStyle}" Margin="0,2,0,4" />
+                            <TextBlock Text="• Oat milk" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Lavender syrup" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Edible glitter topping" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Double shot espresso" Style="{StaticResource TileDetailStyle}" />
+                        </StackPanel>
+                    </Border>
+                    <Border x:ConnectionId='10' Grid.Column="1" Style="{StaticResource OrderTicketStyle}"                       >
+                        <StackPanel Padding="14" Spacing="4" VerticalAlignment="Top">
+                            <TextBlock Text="Matcha Madness Delite" Style="{StaticResource TileTitleStyle}" />
+                            <TextBlock Text="Medium, Hot" Style="{StaticResource TileSubtitleStyle}" Margin="0,2,0,4" />
+                            <TextBlock Text="• Coconut milk" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Vanilla bean paste" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Honey drizzle" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Extra foam" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Cinnamon dust" Style="{StaticResource TileDetailStyle}" />
+                        </StackPanel>
+                    </Border>
+                    <Border x:ConnectionId='11' Grid.Column="2" Style="{StaticResource OrderTicketStyle}"                       >
+                        <StackPanel Padding="14" Spacing="4" VerticalAlignment="Top">
+                            <TextBlock Text="Midnight Velvet Mocha" Style="{StaticResource TileTitleStyle}" />
+                            <TextBlock Text="Large, Iced" Style="{StaticResource TileSubtitleStyle}" Margin="0,2,0,4" />
+                            <TextBlock Text="• Whole milk" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Dark chocolate sauce" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Whipped cream" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Activated charcoal" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Marshmallow bits" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Triple shot espresso" Style="{StaticResource TileDetailStyle}" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+                <!-- Row 2 -->
+                <Grid ColumnSpacing="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Border x:ConnectionId='6' Grid.Column="0" Style="{StaticResource OrderTicketStyle}"                       >
+                        <StackPanel Padding="14" Spacing="4" VerticalAlignment="Top">
+                            <TextBlock Text="Tropical Sunset Frappe" Style="{StaticResource TileTitleStyle}" />
+                            <TextBlock Text="Large, Blended" Style="{StaticResource TileSubtitleStyle}" Margin="0,2,0,4" />
+                            <TextBlock Text="• Almond milk" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Mango puree" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Passion fruit syrup" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Coconut flakes" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Strawberry drizzle" Style="{StaticResource TileDetailStyle}" />
+                        </StackPanel>
+                    </Border>
+                    <Border x:ConnectionId='7' Grid.Column="1" Style="{StaticResource OrderTicketStyle}"                       >
+                        <StackPanel Padding="14" Spacing="4" VerticalAlignment="Top">
+                            <TextBlock Text="Caramel Cloud Bliss" Style="{StaticResource TileTitleStyle}" />
+                            <TextBlock Text="Small, Hot" Style="{StaticResource TileSubtitleStyle}" Margin="0,2,0,4" />
+                            <TextBlock Text="• Oat milk" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Salted caramel sauce" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Brown sugar syrup" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Cold foam cap" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Toffee crunch topping" Style="{StaticResource TileDetailStyle}" />
+                        </StackPanel>
+                    </Border>
+                    <Border x:ConnectionId='8' Grid.Column="2" Style="{StaticResource OrderTicketStyle}"                       >
+                        <StackPanel Padding="14" Spacing="4" VerticalAlignment="Top">
+                            <TextBlock Text="Rose Petal Chai Fusion" Style="{StaticResource TileTitleStyle}" />
+                            <TextBlock Text="Medium, Iced" Style="{StaticResource TileSubtitleStyle}" Margin="0,2,0,4" />
+                            <TextBlock Text="• Soy milk" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Rose water" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Cardamom spice" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Condensed milk swirl" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• Pistachio dust" Style="{StaticResource TileDetailStyle}" />
+                            <TextBlock Text="• No caffeine" Style="{StaticResource TileDetailStyle}" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Recipe Output Area -->
+        <Border Grid.Row="2" Background="#2A1810" CornerRadius="12" Padding="20" Margin="0,4,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <TextBlock x:ConnectionId='3'
+                        x:Name="RecipeHeader"
+                        Text=""
+                        FontSize="18"
+                        FontWeight="SemiBold"
+                        Foreground="{StaticResource CreamText}"
+                        VerticalAlignment="Center" />
+                    <ProgressRing x:ConnectionId='4'
+                        x:Name="RecipeProgressRing"
+                        Width="20"
+                        Height="20"
+                        IsIndeterminate="True"
+                        Visibility="Collapsed" />
+                </StackPanel>
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,8,0,0">
+                    <TextBlock x:ConnectionId='2'
+                        x:Name="RecipeTextBlock"
+                        AutomationProperties.Name="Recipe Output"
+                        Foreground="{StaticResource CreamText}"
+                        IsTextSelectionEnabled="True"
+                        TextWrapping="WrapWholeWords" />
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
+

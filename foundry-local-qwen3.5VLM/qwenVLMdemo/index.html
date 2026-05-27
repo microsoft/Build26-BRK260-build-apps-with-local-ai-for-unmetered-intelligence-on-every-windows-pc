@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>☕ Coffee Shop Inventory</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;500;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+      background: #f5ebe0;
+      color: #4a3728;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, #3c2415 0%, #5c3a1e 100%);
+      padding: 18px 28px;
+      border-bottom: 2px solid #8b6914;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #f5ebe0;
+      letter-spacing: 0.5px;
+    }
+    header .subtitle {
+      font-size: 13px;
+      color: #c4a882;
+    }
+
+    #status-bar {
+      padding: 10px 28px;
+      background: #ede0d4;
+      border-bottom: 1px solid #d5c4a1;
+      font-size: 13px;
+      color: #6b4f3a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #status-bar .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #a89279;
+      transition: background 0.3s;
+    }
+    #status-bar .dot.ready { background: #6b8e23; }
+    #status-bar .dot.loading { background: #d4a017; animation: pulse 1s infinite; }
+    #status-bar .dot.error { background: #c0392b; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    #progress-container {
+      padding: 0 28px;
+      display: none;
+    }
+    #progress-bar-bg {
+      height: 4px;
+      background: #d5c4a1;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #8b5e3c, #d4a017);
+      transition: width 0.2s;
+    }
+
+    /* ── Main content ───────────────────────── */
+    .content {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      min-height: 200px;
+    }
+
+    /* Left panel — image */
+    .panel-left {
+      width: 45%;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-right: 1px solid #d5c4a1;
+    }
+
+    #drop-zone {
+      flex: 1;
+      border: 2px dashed #b8976a;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+      overflow: hidden;
+      min-height: 300px;
+      background: #faf3eb;
+    }
+    #drop-zone:hover, #drop-zone.drag-over {
+      border-color: #8b5e3c;
+      background: rgba(139,94,60,0.06);
+    }
+    #drop-zone .placeholder {
+      text-align: center;
+      color: #8b7355;
+    }
+    #drop-zone .placeholder .icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+    #drop-zone .placeholder p { font-size: 14px; color: #6b4f3a; }
+    #drop-zone .placeholder .hint { font-size: 12px; color: #a89279; margin-top: 6px; }
+
+    #preview-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+    button:active { transform: scale(0.97); }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6b3a2a, #8b5e3c);
+      color: #f5ebe0;
+      flex: 1;
+    }
+    .btn-primary:hover:not(:disabled) { opacity: 0.9; }
+
+    .btn-secondary {
+      background: #d5c4a1;
+      color: #4a3728;
+    }
+    .btn-secondary:hover:not(:disabled) { background: #c4b08d; }
+
+    /* Right panel — description */
+    .panel-right {
+      flex: 1;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .panel-right h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #5c3a1e;
+    }
+
+    #description-output {
+      flex: 1;
+      background: #faf3eb;
+      border: 1px solid #d5c4a1;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      color: #4a3728;
+    }
+    #description-output .placeholder-text {
+      color: #a89279;
+      font-style: italic;
+    }
+
+    #stats {
+      font-size: 12px;
+      color: #8b7355;
+      display: flex;
+      gap: 20px;
+    }
+
+    /* ── Scrollbar styling ───────────────────── */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #c4b08d; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #a89279; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>☕ Coffee Shop Inventory</h1>
+      <div class="subtitle">Powered by Foundry Local · Qwen 3.5 9B Vision Language Model</div>
+    </div>
+  </header>
+
+  <div id="status-bar">
+    <span class="dot" id="status-dot"></span>
+    <span id="status-text">Initializing…</span>
+  </div>
+
+  <div id="progress-container">
+    <div id="progress-bar-bg"><div id="progress-bar"></div></div>
+  </div>
+
+  <div class="content">
+    <!-- Left: Image upload -->
+    <div class="panel-left">
+      <div id="drop-zone">
+        <div class="placeholder" id="placeholder">
+          <div class="icon">📸</div>
+          <p>Drop a photo of inventory here or click to browse</p>
+          <p class="hint">Snap a pic of beans, cups, syrups, pastries…</p>
+        </div>
+        <img id="preview-img" alt="Preview" />
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-secondary" id="btn-browse" disabled>📂 Browse</button>
+        <button class="btn-primary" id="btn-describe" disabled>🔍 Identify Items</button>
+      </div>
+    </div>
+
+    <!-- Right: Description output -->
+    <div class="panel-right">
+      <h2>📋 Inventory Details</h2>
+      <div id="description-output">
+        <span class="placeholder-text">Upload a photo of your inventory and click "Identify Items" to get a detailed breakdown. ☕🫘🧁</span>
+      </div>
+      <div id="stats"></div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

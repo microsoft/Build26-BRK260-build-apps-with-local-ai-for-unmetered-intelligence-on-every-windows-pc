@@ -39,7 +39,7 @@ Once your content is in the repo, use these three phrases with Copilot to build 
 
 # [Microsoft Build 2026](https://build.microsoft.com)
 
-## 🔥 BRKXXX: SESSION TITLE
+## 🔥 BRK 260: Build Apps with Local AI for Unmetered Intelligence on every Windows PC ​
 
 ### Session Description
 

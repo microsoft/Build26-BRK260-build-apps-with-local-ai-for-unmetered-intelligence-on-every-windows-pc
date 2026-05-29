@@ -40,6 +40,12 @@ Each section below maps to a demo from the session, with links and quick steps t
 2. 
 3. 
 
+### ✨ Other Windows AI APIs
+
+1. Install the latest [Windows App SDK release](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads)
+2. Read about the full set of supported APIs — Phi Silica, Text Recognition (OCR), Image Super Resolution, Object Erase, and more — in [What are Windows AI APIs?](https://learn.microsoft.com/en-us/windows/ai/apis/)
+3. Try them live on your PC with the [AI Dev Gallery](https://aka.ms/ai-dev-gallery) and browse end-to-end code in the [Windows AI APIs WinUI sample](https://github.com/microsoft/WindowsAppSDK-Samples/tree/release/experimental/Samples/WindowsAIFoundry)
+
 ### 🖼️ Foundry Local - Qwen3.5 VLM (GA)
 
 Pre-requisites - have node.js installed
@@ -47,6 +53,7 @@ Pre-requisites - have node.js installed
 1. Install foundry local - npm install foundry-local-sdk
 2. From inside the foundry-local folder, run this command-  npm install
 3. npm run dev
+4. Browse the [Foundry Local model catalog](https://www.foundrylocal.ai/models) to explore other models you can swap in
 
 ### 🛠️ Windows ML CLI (Preview)
 
@@ -78,12 +85,13 @@ Pre-requisites - have node.js installed
 | Windows AI API Preview — Aion | Early-access on-device generative AI capabilities for your apps |
 | [Foundry Local](https://aka.ms/foundrylocal) | Run open-source models locally on Windows with a few commands |
 | [Windows ML](https://aka.ms/winml) | Microsoft's high-performance local AI inferencing framework for Windows |
+| [Windows ML on GitHub](https://github.com/microsoft/WindowsML) | Official repo — file issues, browse samples, and share feedback |
 | [Windows ML CLI](https://aka.ms/winmlcli) | Convert, optimize, and benchmark models from Hugging Face or your own across GPU, NPU, and CPU |
 | [AI Dev Gallery](https://aka.ms/ai-dev-gallery) | Interactive samples and source code for local AI scenarios on Windows |
 | [Foundry Toolkit for VS Code](https://aka.ms/foundry-toolkit) | Discover, prep, and deploy models for local AI right from the editor |
 | [Microsoft Foundry on Windows overview](https://learn.microsoft.com/windows/ai/overview) | Learn how Windows AI APIs, Foundry Local, and Windows ML fit together |
-| [ONNX Runtime](https://onnxruntime.ai/docs/) | Cross-platform ML inferencing engine that powers Windows ML |
-| [ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/) | Run ONNX models directly in the browser |
+| [ONNX Runtime](https://onnxruntime.ai/docs/) | API reference for the cross-platform inferencing engine that powers Windows ML |
+| [ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/) | Framework API for running ONNX models in the browser via WebNN — backed by Windows ML on Windows for native hardware acceleration |
 | [WebNN](https://aka.ms/webnn) | Web Neural Network API for hardware-accelerated ML in the browser, powered by Windows ML on Windows |
 | [Hugging Face](https://huggingface.co/) | Community platform hosting thousands of open-source AI models you can bring to Windows ML |
 

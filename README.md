@@ -40,11 +40,11 @@ Each section below maps to a demo from the session, with links and quick steps t
 2. 
 3. 
 
-### ✨ Other Windows AI APIs
+### ✨ Other Windows AI APIs (GA)
 
-1. Install the latest [Windows App SDK release](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads)
-2. Read about the full set of supported APIs — Phi Silica, Text Recognition (OCR), Image Super Resolution, Object Erase, and more — in [What are Windows AI APIs?](https://learn.microsoft.com/en-us/windows/ai/apis/)
-3. Try them live on your PC with the [AI Dev Gallery](https://aka.ms/ai-dev-gallery) and browse end-to-end code in the [Windows AI APIs WinUI sample](https://github.com/microsoft/WindowsAppSDK-Samples/tree/release/experimental/Samples/WindowsAIFoundry)
+1. Install the latest [Windows App SDK release](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) to get started
+2. Browse the supported APIs — Phi Silica, Text Recognition (OCR), Image Super Resolution, Object Erase, and more — in [What are Windows AI APIs?](https://learn.microsoft.com/en-us/windows/ai/apis/)
+3. Try them on your PC with the [AI Dev Gallery](https://aka.ms/ai-dev-gallery), or explore end-to-end code in the [WinUI sample](https://github.com/microsoft/WindowsAppSDK-Samples/tree/release/experimental/Samples/WindowsAIFoundry)
 
 ### 🖼️ Foundry Local - Qwen3.5 VLM (GA)
 

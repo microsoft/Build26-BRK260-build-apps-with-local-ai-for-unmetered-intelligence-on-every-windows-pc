@@ -1,36 +1,3 @@
-# 🚀 Get Started
-
-**This repo is where attendees go to continue their learning after your session — and your Copilot agent will help you set it up.**
-
-### Step 1: Open your repo
-
-Open this repo in a **Codespace** (click the green **Code** button → **Create a Codespace**) — or clone it locally. Then open **GitHub Copilot Chat**.
-
-### Step 2: Add your content
-
-Give the agent something to work with. Drag files into the Explorer panel — session abstracts, outlines, screenshots, notes — and drop them in one of two places:
-
-| Where to put it | What goes there | Who sees it |
-|---|---|---|
-| **`_remove-before-publish/`** | Internal reference materials (abstracts, outlines, screenshots, planning docs) | **Copilot only** — never published |
-| **`/docs/`, `/src/`, or repo root** | Lab instructions, demo code, sample data, getting-started guides | **Attendees** — published with the repo |
-
-> 💡 Not sure? Start by dropping your session abstract or outline into `_remove-before-publish/`. The agent will figure out what to do with it.
-
-### Step 3: Ask the Agent
-
-Once your content is in the repo, use these three phrases with Copilot to build out your session repo:
-
-| Phrase to use with Copilot | What it does | When to run it |
-|---|---|---|
-| **"Help me get started"** | Sets up session title, description, outcomes, and owners | After you've added your session abstract or outline to the repo |
-| **"Help me refine content"** | Organizes your session content into the repo | Each time you add or update content |
-| **"Help me finalize"** | Final review, cleanup, and publication prep | When you're ready to publish |
-
-> 💡 **These three phrases are just the starting point.** Copilot can do much more — try asking it to brainstorm next steps for attendees, generate code samples, or build out your repo structure. Don't be afraid to put it in plan mode and ask for what you need.
-
----
-
 <a name="start-building"></a>
 <br>
 <p align="center">
@@ -43,22 +10,37 @@ Once your content is in the repo, use these three phrases with Copilot to build 
 
 ### Session Description
 
-Start with solution-centric Windows AI APIs - now expanding beyond Copilot+ devices. Use Foundry Local to run open-source models locally. With new tooling in Foundry Toolkit, optimize and prep your models for local AI deployments. Run custom AI workloads locally across GPU, NPU, or CPU with Windows ML, now with support for web apps through WebNN. Learn how the platform enables on-device inference across all Windows PCs to help you ship performant, scalable, and secure AI-powered apps on Windows.
+Start with solution-centric **Windows AI APIs** - now expanding beyond Copilot+ devices. Use **Foundry Local** to run open-source models locally. With the brand new **Windows ML CLI**, as well as the **Foundry Toolkit** in VS Code extension in VS Code, optimize and prep your models for local AI deployments. Run custom AI workloads locally across GPU, NPU, or CPU with **Windows ML**, now with support for web apps through WebNN. Learn how the platform enables on-device inference across all Windows PCs to help you ship performant, scalable, and secure AI-powered apps on Windows.
 
-### 🎙️ Speech Recognition API
+<p align="center">
+<img src="img/foundry-on-windows.png" alt="Foundry on Windows" width="900"/>
+</p>
+
+## 🧪 Session Demos & Getting Started
+
+Each section below maps to a demo from the session, with links and quick steps to try it yourself.
+
+### 🎙️ Speech Recognition API (Preview)
 
 
 1. Install the **June experimental release** of the Windows App SDK (version2.1.6). This will be released soon.
 2. In Visual Studio, set a dependency on your downloaded **Windows App SDK** NuGet package.
 3. Build and run the solution in Visual Studio.
 
-### 🧠 Phi Silica on GPU
+### 🧠 Phi Silica on GPU (Preview)
 
 1. Install the **June experimental release** of the Windows App SDK (version 2.1.6). This will be released soon.
 2. In Visual Studio, set a dependency on your downloaded **Windows App SDK** NuGet package.
 3. Build and run the solution in Visual Studio.
 
-### 🖼️ Foundry Local - Qwen3.5 VLM
+### 🤖 Aion (Preview)
+
+<!-- TODO: Fill in -->
+1. 
+2. 
+3. 
+
+### 🖼️ Foundry Local - Qwen3.5 VLM (GA)
 
 Pre-requisites - have node.js installed
 
@@ -66,19 +48,44 @@ Pre-requisites - have node.js installed
 2. From inside the foundry-local folder, run this command-  npm install
 3. npm run dev
 
-### 🛠️ Windows ML CLI
+### 🛠️ Windows ML CLI (Preview)
 
-<!-- Add content about Windows ML CLI demo/walkthrough -->
+1. Download the Windows ML CLI and agent skills from the GitHub repository: [aka.ms/winmlcli](https://aka.ms/winmlcli)
+2. Run the CLI from PowerShell or your favorite AI-powered dev environment
+3. Convert, optimize and benchmark your custom model or one from Hugging Face
 
-### 🌐 WebNN
+### ⚡ Windows ML (GA)
 
-<!-- Add content about WebNN demo/walkthrough -->
+1. Install the latest [Windows App SDK release](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) to get started
+2. Explore the [Windows ML documentation](https://learn.microsoft.com/windows/ai/windows-ml/) for samples and API reference
+3. Share feedback in the GitHub repository: [microsoft/WindowsML](https://github.com/microsoft/WindowsML)
+
+### 🌐 WebNN (Preview)
+
+1. Enable these experimental flags in Edge or Chrome:
+   - Enables WebNN API (`#web-machine-learning-neural-network`) — Enabled
+   - Enables experimental WebNN API features (`#experimental-web-machine-learning-neural-network`) — Enabled
+   - ONNX Runtime backend for WebNN (`#webnn-onnxruntime`) — Enabled
+2. Try the Unmetered Tokens Café sentiment classification web app running on Windows ML: [anatarnousk/Sentiment-Analysis-WinML-WebNN](https://github.com/anatarnousk/Sentiment-Analysis-WinML-WebNN)
+3. Check out the samples on the [WebNN Developer Preview](https://microsoft.github.io/webnn-developer-preview/) page
 
 ### 📚 Resources
 
 | Resource | Description |
 |:---------|:------------|
-| [https://aka.ms/build26-next-steps](https://aka.ms/build26-next-steps) | Explore lab and session repos to further your learning from Microsoft Build |
+| [Build 2026 next steps](https://aka.ms/build26-next-steps) | Explore lab and session repos to further your learning from Microsoft Build |
+| [Windows App SDK](https://aka.ms/winappsdk) | The unified SDK that delivers Windows AI APIs and modern UI to your apps |
+| Windows AI API Preview — Aion | Early-access on-device generative AI capabilities for your apps |
+| [Foundry Local](https://aka.ms/foundrylocal) | Run open-source models locally on Windows with a few commands |
+| [Windows ML](https://aka.ms/winml) | Microsoft's high-performance local AI inferencing framework for Windows |
+| [Windows ML CLI](https://aka.ms/winmlcli) | Convert, optimize, and benchmark models from Hugging Face or your own across GPU, NPU, and CPU |
+| [AI Dev Gallery](https://aka.ms/ai-dev-gallery) | Interactive samples and source code for local AI scenarios on Windows |
+| [Foundry Toolkit for VS Code](https://aka.ms/foundry-toolkit) | Discover, prep, and deploy models for local AI right from the editor |
+| [Microsoft Foundry on Windows overview](https://learn.microsoft.com/windows/ai/overview) | Learn how Windows AI APIs, Foundry Local, and Windows ML fit together |
+| [ONNX Runtime](https://onnxruntime.ai/docs/) | Cross-platform ML inferencing engine that powers Windows ML |
+| [ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/) | Run ONNX models directly in the browser |
+| [WebNN](https://aka.ms/webnn) | Web Neural Network API for hardware-accelerated ML in the browser, powered by Windows ML on Windows |
+| [Hugging Face](https://huggingface.co/) | Community platform hosting thousands of open-source AI models you can bring to Windows ML |
 
 
 ### 🌟 Microsoft Learn MCP Server
@@ -106,10 +113,15 @@ For more info, other clients, and to post questions, visit the [Learn MCP Server
 
 <table>
 <tr>
-    <td align="center"><a href="http://github.com/yourGitHubHandle">
-        <img src="https://github.com/yourGitHubHandle.png" width="100px;" alt="INSERT NAME HERE"/><br />
-        <sub><b>INSERT NAME HERE</b></sub></a><br />
-            <a href="https://github.com/yourGitHubHandle" title="talk">📢</a>
+    <td align="center"><a href="http://github.com/anatarnousk">
+        <img src="https://github.com/anatarnousk.png" width="100px;" alt="Anastasiya Tarnouskaya"/><br />
+        <sub><b>Anastasiya Tarnouskaya</b></sub></a><br />
+            <a href="https://github.com/anatarnousk" title="talk">📢</a>
+    </td>
+    <td align="center"><a href="https://www.linkedin.com/in/aditinarvekar/">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQGFyYr64J7uTw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732657509063?e=1781740800&v=beta&t=Vd9wN1T8U5sDQblvPdRtSR3tfR5rSL0nCmiAQqJWCFg" width="100px;" alt="Aditi Narvekar"/><br />
+        <sub><b>Aditi Narvekar</b></sub></a><br />
+            <a href="https://www.linkedin.com/in/aditinarvekar/" title="talk">📢</a>
     </td>
 </tr></table>
 

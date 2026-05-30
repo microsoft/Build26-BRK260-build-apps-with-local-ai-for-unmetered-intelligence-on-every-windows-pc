@@ -33,12 +33,10 @@ Each section below maps to a demo from the session, with links and quick steps t
 2. In Visual Studio, set a dependency on your downloaded **Windows App SDK** NuGet package.
 3. Build and run the solution in Visual Studio.
 
-### 🤖 Aion (Preview)
+### 🤖 Aion — Windows AI API (Preview)
 
-<!-- TODO: Fill in -->
-1. 
-2. 
-3. 
+1. Get the preview **Windows AI API** package for **Aion** at [aka.ms/tryAion](https://aka.ms/tryAion)
+2. Or try it out today via the **Prompt API** in the latest [Microsoft Edge Canary](https://aka.ms/edge-ai-apis)
 
 ### ✨ Other Windows AI APIs (GA)
 

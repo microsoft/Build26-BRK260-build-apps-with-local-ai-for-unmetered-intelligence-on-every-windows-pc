@@ -10,7 +10,7 @@
     "dist": "electron-builder --win --arm64"
   },
   "devDependencies": {
-    "electron": "^34.5.8",
+    "electron": "^39.8.5",
     "electron-builder": "^25.1.8"
   },
   "build": {

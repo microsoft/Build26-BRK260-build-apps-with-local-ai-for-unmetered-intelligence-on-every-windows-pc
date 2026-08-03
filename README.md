@@ -124,10 +124,10 @@ For more info, other clients, and to post questions, visit the [Learn MCP Server
         <sub><b>Anastasiya Tarnouskaya</b></sub></a><br />
             <a href="https://github.com/anatarnousk" title="talk">📢</a>
     </td>
-    <td align="center"><a href="https://www.linkedin.com/in/aditinarvekar/">
+    <td align="center"><a href="https://www.linkedin.com/in/aditi-narvekar/">
         <img src="https://media.licdn.com/dms/image/v2/D5603AQGFyYr64J7uTw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732657509063?e=1781740800&v=beta&t=Vd9wN1T8U5sDQblvPdRtSR3tfR5rSL0nCmiAQqJWCFg" width="100px;" alt="Aditi Narvekar"/><br />
         <sub><b>Aditi Narvekar</b></sub></a><br />
-            <a href="https://www.linkedin.com/in/aditinarvekar/" title="talk">📢</a>
+            <a href="https://www.linkedin.com/in/aditi-narvekar/" title="talk">📢</a>
     </td>
 </tr></table>
 
